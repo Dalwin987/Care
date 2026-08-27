@@ -1,0 +1,454 @@
+/* ==========================================
+   OTP PAGE
+========================================== */
+
+.otp-page {
+  min-height: 100vh;
+  width: 100%;
+
+  background: linear-gradient(
+    135deg,
+    #eff6ff 0%,
+    #ffffff 50%,
+    #dbeafe 100%
+  );
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 40px 20px;
+
+  position: relative;
+  overflow: hidden;
+
+  font-family:
+    Inter,
+    Arial,
+    Helvetica,
+    sans-serif;
+}
+
+
+/* ==========================================
+   BACKGROUND CIRCLES
+========================================== */
+
+.otp-circle {
+  position: absolute;
+
+  border-radius: 50%;
+
+  background: #2563eb;
+
+  opacity: 0.08;
+
+  pointer-events: none;
+}
+
+.otp-circle-one {
+  width: 350px;
+  height: 350px;
+
+  top: -150px;
+  left: -100px;
+}
+
+.otp-circle-two {
+  width: 450px;
+  height: 450px;
+
+  right: -150px;
+  bottom: -220px;
+}
+
+
+/* ==========================================
+   OTP CARD
+========================================== */
+
+.otp-card {
+  width: 100%;
+  max-width: 450px;
+
+  background: #ffffff;
+
+  border-radius: 24px;
+
+  padding: 40px;
+
+  position: relative;
+  z-index: 2;
+
+  border: 1px solid #dbeafe;
+
+  box-shadow:
+    0 25px 60px rgba(37, 99, 235, 0.12);
+
+  overflow: hidden;
+}
+
+
+/* Blue top line */
+
+.otp-card::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 5px;
+
+  background: #2563eb;
+}
+
+
+/* ==========================================
+   HEADER
+========================================== */
+
+.otp-header {
+  text-align: center;
+
+  margin-bottom: 30px;
+}
+
+
+.otp-icon {
+  width: 58px;
+  height: 58px;
+
+  margin: 0 auto 15px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 17px;
+
+  background: #2563eb;
+
+  font-size: 27px;
+
+  box-shadow:
+    0 10px 25px rgba(37, 99, 235, 0.25);
+}
+
+
+.otp-header h1 {
+  margin: 0;
+
+  color: #0f172a;
+
+  font-size: 28px;
+
+  font-weight: 700;
+
+  letter-spacing: -0.5px;
+}
+
+
+.otp-header p {
+  margin-top: 9px;
+
+  color: #64748b;
+
+  font-size: 14px;
+
+  line-height: 1.6;
+}
+
+
+.otp-header span {
+  color: #1e293b;
+
+  font-weight: 600;
+
+  word-break: break-word;
+}
+
+
+/* ==========================================
+   ERROR
+========================================== */
+
+.otp-error {
+  background: #eff6ff;
+
+  color: #dc2626;
+
+  border: 1px solid #bfdbfe;
+
+  border-left: 4px solid #2563eb;
+
+  padding: 12px 14px;
+
+  border-radius: 10px;
+
+  margin-bottom: 20px;
+
+  font-size: 14px;
+}
+
+
+/* ==========================================
+   FORM
+========================================== */
+
+.otp-card form {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 20px;
+}
+
+
+.otp-form-group {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 8px;
+}
+
+
+.otp-form-group label {
+  color: #1e293b;
+
+  font-size: 14px;
+
+  font-weight: 600;
+}
+
+
+/* ==========================================
+   OTP INPUT
+========================================== */
+
+.otp-form-group input {
+  width: 100%;
+
+  box-sizing: border-box;
+
+  padding: 15px;
+
+  border: 1.5px solid #dbe3ef;
+
+  border-radius: 10px;
+
+  outline: none;
+
+  background: #ffffff;
+
+  color: #0f172a;
+
+  font-size: 24px;
+
+  font-weight: 600;
+
+  text-align: center;
+
+  letter-spacing: 10px;
+
+  transition:
+    border-color 0.25s ease,
+    box-shadow 0.25s ease,
+    transform 0.25s ease;
+}
+
+
+.otp-form-group input::placeholder {
+  color: #cbd5e1;
+
+  font-size: 13px;
+
+  letter-spacing: 0;
+}
+
+
+.otp-form-group input:hover {
+  border-color: #93c5fd;
+}
+
+
+.otp-form-group input:focus {
+  border-color: #2563eb;
+
+  box-shadow:
+    0 0 0 4px rgba(37, 99, 235, 0.1);
+
+  transform: translateY(-1px);
+}
+
+
+/* ==========================================
+   VERIFY BUTTON
+========================================== */
+
+.otp-button {
+  width: 100%;
+
+  border: none;
+
+  padding: 14px;
+
+  border-radius: 10px;
+
+  background: #2563eb;
+
+  color: #ffffff;
+
+  font-size: 15px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 10px 20px rgba(37, 99, 235, 0.2);
+
+  transition:
+    background 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+
+.otp-button:hover {
+  background: #1d4ed8;
+
+  box-shadow:
+    0 14px 28px rgba(37, 99, 235, 0.28);
+}
+
+
+.otp-button:disabled {
+  background: #93c5fd;
+
+  cursor: not-allowed;
+
+  box-shadow: none;
+}
+
+
+/* ==========================================
+   EMAIL NOT FOUND
+========================================== */
+
+.otp-error-page {
+  padding: 20px;
+}
+
+
+.otp-error-card {
+  width: 100%;
+  max-width: 400px;
+
+  padding: 35px;
+
+  text-align: center;
+
+  background: #ffffff;
+
+  border-radius: 20px;
+
+  border: 1px solid #dbeafe;
+
+  box-shadow:
+    0 25px 60px rgba(37, 99, 235, 0.12);
+}
+
+
+.otp-error-icon {
+  width: 50px;
+  height: 50px;
+
+  margin: 0 auto 15px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #2563eb;
+
+  color: white;
+
+  font-size: 25px;
+
+  font-weight: 700;
+}
+
+
+.otp-error-title {
+  color: #dc2626;
+
+  margin-bottom: 20px;
+
+  font-size: 15px;
+}
+
+
+.otp-back-button {
+  border: none;
+
+  padding: 11px 24px;
+
+  border-radius: 9px;
+
+  background: #2563eb;
+
+  color: #ffffff;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background 0.25s ease,
+    transform 0.25s ease;
+}
+
+
+.otp-back-button:hover {
+  background: #1d4ed8;
+
+  transform: translateY(-2px);
+}
+
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media (max-width: 600px) {
+  .otp-page {
+    padding: 25px 15px;
+  }
+
+  .otp-card {
+    padding: 30px 22px;
+
+    border-radius: 20px;
+  }
+
+  .otp-header h1 {
+    font-size: 24px;
+  }
+
+  .otp-form-group input {
+    font-size: 21px;
+
+    letter-spacing: 7px;
+  }
+
+  .otp-circle {
+    display: none;
+  }
+}

@@ -1,0 +1,946 @@
+.medicine-page {
+  min-height: 100vh;
+  width: 100%;
+
+  background: linear-gradient(
+    135deg,
+    #eff6ff 0%,
+    #ffffff 50%,
+    #dbeafe 100%
+  );
+
+  position: relative;
+
+  overflow: hidden;
+
+  font-family: Arial, sans-serif;
+}
+
+/* ==========================================
+   HOME ICON
+========================================== */
+
+.medicine-home-logo {
+  position: fixed;
+
+  top: 20px;
+  left: 20px;
+
+  width: 45px;
+  height: 45px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #2563eb;
+  background: #ffffff;
+
+  border: 1px solid #dbeafe;
+
+  border-radius: 12px;
+
+  text-decoration: none;
+
+  box-shadow:
+    0 8px 20px rgba(37, 99, 235, 0.12);
+
+  z-index: 1000;
+
+  cursor: pointer;
+}
+
+/* ==========================================
+   BACKGROUND CIRCLES
+========================================== */
+
+.medicine-circle {
+  position: absolute;
+
+  border-radius: 50%;
+
+  background: #2563eb;
+
+  opacity: 0.07;
+
+  pointer-events: none;
+}
+
+.medicine-circle-one {
+  width: 420px;
+  height: 420px;
+
+  top: -200px;
+  left: -160px;
+}
+
+.medicine-circle-two {
+  width: 500px;
+  height: 500px;
+
+  right: -220px;
+  bottom: -250px;
+}
+
+/* ==========================================
+   TOP HEADER
+========================================== */
+
+.medicine-top-header {
+  position: relative;
+
+  z-index: 5;
+
+  background: rgba(255, 255, 255, 0.85);
+
+  border-bottom: 1px solid #dbeafe;
+
+  backdrop-filter: blur(10px);
+}
+
+.medicine-header-inner {
+  max-width: 768px;
+
+  margin: auto;
+
+  padding: 16px 20px;
+}
+
+.medicine-back-button {
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+
+  background: transparent;
+
+  border: none;
+
+  color: #475569;
+
+  font-size: 15px;
+
+  font-weight: 500;
+
+  cursor: pointer;
+
+  transition:
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.medicine-back-button:hover {
+  color: #2563eb;
+
+  transform: translateX(-3px);
+}
+
+/* ==========================================
+   MAIN
+========================================== */
+
+.medicine-main {
+  max-width: 768px;
+
+  margin: auto;
+
+  padding: 35px 20px 50px;
+
+  position: relative;
+
+  z-index: 2;
+}
+
+/* ==========================================
+   CARD
+========================================== */
+
+.medicine-card {
+  background: #ffffff;
+
+  padding: 32px;
+
+  border-radius: 24px;
+
+  border: 1px solid #dbeafe;
+
+  box-shadow:
+    0 25px 60px rgba(37, 99, 235, 0.12);
+
+  position: relative;
+
+  overflow: hidden;
+}
+
+.medicine-card::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 5px;
+
+  background: #2563eb;
+}
+
+/* ==========================================
+   TITLE
+========================================== */
+
+.medicine-header {
+  margin-bottom: 28px;
+}
+
+.medicine-title-row {
+  display: flex;
+
+  align-items: center;
+
+  gap: 14px;
+}
+
+.medicine-title-icon {
+  width: 48px;
+  height: 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #2563eb;
+
+  color: #ffffff;
+
+  border-radius: 14px;
+
+  box-shadow:
+    0 10px 25px rgba(37, 99, 235, 0.2);
+}
+
+.medicine-title-row h1 {
+  margin: 0;
+
+  color: #0f172a;
+
+  font-size: 27px;
+
+  font-weight: 700;
+}
+
+.medicine-title-row p {
+  margin: 5px 0 0;
+
+  color: #64748b;
+
+  font-size: 14px;
+}
+
+/* ==========================================
+   FORM
+========================================== */
+
+.medicine-form {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 21px;
+}
+
+.medicine-form-group {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 8px;
+}
+
+.medicine-form-group > label {
+  color: #334155;
+
+  font-size: 14px;
+
+  font-weight: 600;
+}
+
+/* ==========================================
+   INPUTS
+========================================== */
+
+.medicine-form-group input[type="text"],
+.medicine-form-group input[type="time"],
+.medicine-form-group textarea {
+  width: 100%;
+
+  box-sizing: border-box;
+
+  border: 1.5px solid #dbe3ef;
+
+  border-radius: 11px;
+
+  padding: 13px 15px;
+
+  background: #ffffff;
+
+  color: #0f172a;
+
+  outline: none;
+
+  font-size: 14px;
+
+  transition:
+    border-color 0.25s ease,
+    box-shadow 0.25s ease,
+    transform 0.25s ease;
+}
+
+.medicine-form-group input::placeholder,
+.medicine-form-group textarea::placeholder {
+  color: #94a3b8;
+}
+
+.medicine-form-group input:focus,
+.medicine-form-group textarea:focus {
+  border-color: #2563eb;
+
+  box-shadow:
+    0 0 0 4px rgba(37, 99, 235, 0.1);
+
+  transform: translateY(-1px);
+}
+
+.medicine-form-group textarea {
+  resize: none;
+}
+
+/* ==========================================
+   IMAGE UPLOAD
+========================================== */
+
+.medicine-image-box {
+  border: 2px dashed #bfdbfe;
+
+  border-radius: 18px;
+
+  padding: 18px;
+
+  background: #f8fbff;
+
+  transition:
+    border-color 0.25s ease,
+    background 0.25s ease;
+}
+
+.medicine-image-box:hover {
+  border-color: #2563eb;
+
+  background: #eff6ff;
+}
+
+.medicine-upload {
+  min-height: 180px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  color: #64748b;
+
+  cursor: pointer;
+}
+
+.medicine-upload svg {
+  color: #2563eb;
+
+  margin-bottom: 10px;
+}
+
+.medicine-upload span {
+  color: #334155;
+
+  font-weight: 600;
+
+  font-size: 15px;
+}
+
+.medicine-upload small {
+  color: #94a3b8;
+
+  margin-top: 5px;
+
+  font-size: 12px;
+}
+
+.medicine-upload input,
+.medicine-change-image input {
+  display: none;
+}
+
+/* ==========================================
+   IMAGE PREVIEW
+========================================== */
+
+.medicine-preview {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 15px;
+}
+
+.medicine-preview img {
+  width: 100%;
+
+  height: 240px;
+
+  object-fit: cover;
+
+  border-radius: 14px;
+
+  display: block;
+}
+
+.medicine-change-image {
+  align-self: flex-start;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  background: #eff6ff;
+
+  color: #2563eb;
+
+  padding: 10px 15px;
+
+  border-radius: 10px;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background 0.25s ease,
+    transform 0.25s ease;
+}
+
+.medicine-change-image:hover {
+  background: #dbeafe;
+
+  transform: translateY(-1px);
+}
+
+/* ==========================================
+   HELP TEXT
+========================================== */
+
+.medicine-help-text {
+  margin: 0;
+
+  color: #94a3b8;
+
+  font-size: 12px;
+}
+
+/* ==========================================
+   SUBMIT BUTTON
+========================================== */
+
+.medicine-submit {
+  width: 100%;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 8px;
+
+  border: none;
+
+  border-radius: 11px;
+
+  padding: 14px;
+
+  background: #2563eb;
+
+  color: #ffffff;
+
+  font-size: 15px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 10px 22px rgba(37, 99, 235, 0.2);
+
+  transition:
+    background 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.medicine-submit:hover {
+  background: #1d4ed8;
+
+  box-shadow:
+    0 14px 28px rgba(37, 99, 235, 0.28);
+}
+
+.medicine-submit:disabled {
+  background: #93c5fd;
+
+  cursor: not-allowed;
+
+  box-shadow: none;
+}
+
+/* ==========================================
+   LOADER
+========================================== */
+
+.medicine-spinner {
+  animation: medicine-spin 1s linear infinite;
+}
+
+@keyframes medicine-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 600px) {
+  .medicine-main {
+    padding: 25px 14px 40px;
+  }
+
+  .medicine-card {
+    padding: 24px 18px;
+
+    border-radius: 20px;
+  }
+
+  .medicine-title-row h1 {
+    font-size: 23px;
+  }
+
+  .medicine-title-icon {
+    width: 44px;
+    height: 44px;
+  }
+
+  .medicine-preview img {
+    height: 190px;
+  }
+
+  .medicine-circle {
+    display: none;
+  }
+}
+.medicine-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.medicine-form-label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+/* Time container */
+
+.medicine-time-wrapper {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  width: 100%;
+
+  background: #ffffff;
+
+  border: 1.5px solid #dbeafe;
+
+  border-radius: 14px;
+
+  transition: all 0.25s ease;
+
+  overflow: hidden;
+}
+
+.medicine-time-wrapper:hover {
+  border-color: #93c5fd;
+
+  box-shadow:
+    0 6px 18px rgba(37, 99, 235, 0.08);
+}
+
+.medicine-time-wrapper:focus-within {
+  border-color: #2563eb;
+
+  box-shadow:
+    0 0 0 4px rgba(37, 99, 235, 0.10);
+}
+
+/* C
+
+.medicine-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.medicine-form-label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.medicine-time-wrapper {
+  position: relative;
+
+  width: 100%;
+  height: 52px;
+
+  display: flex;
+  align-items: center;
+
+  background: #ffffff;
+
+  border: 1.5px solid #dbeafe;
+  border-radius: 14px;
+
+  overflow: hidden;
+
+  transition: all 0.25s ease;
+}
+
+.medicine-time-wrapper:hover {
+  border-color: #93c5fd;
+}
+
+.medicine-time-wrapper:focus-within {
+  border-color: #2563eb;
+
+  box-shadow:
+    0 0 0 4px rgba(37, 99, 235, 0.1);
+}
+
+.medicine-time-input {
+  width: 100%;
+  height: 100%;
+
+  border: none;
+  outline: none;
+
+  background: transparent;
+
+  padding: 0 52px 0 16px;
+
+  font-size: 15px;
+  font-weight: 500;
+
+  color: #1e293b;
+
+  cursor: pointer;
+}
+/* ==========================================
+   TIME PICKER
+========================================== */
+/* ==========================================
+   TIME WRAPPER
+========================================== */
+
+.medicine-time-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  width: fit-content;
+
+  cursor: pointer;
+}
+
+
+/* ==========================================
+   TIME BOX
+========================================== */
+
+.time-box {
+  width: 78px;
+  height: 50px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid #d8dce5;
+  border-radius: 10px;
+
+  background: #ffffff;
+
+  font-size: 17px;
+  font-weight: 600;
+
+  transition: 0.2s ease;
+}
+
+.time-box:hover {
+  border-color: #6366f1;
+  box-shadow:
+    0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.period-box {
+  width: 95px;
+}
+
+.time-colon {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+
+/* ==========================================
+   CLOCK PICKER
+========================================== */
+
+.clock-picker {
+  width: 330px;
+
+  margin-top: 12px;
+  padding: 18px;
+
+  background: #ffffff;
+
+  border: 1px solid #e1e1e1;
+  border-radius: 18px;
+
+  box-shadow:
+    0 15px 40px rgba(0, 0, 0, 0.15);
+
+  position: relative;
+
+  z-index: 9999;
+}
+
+
+/* ==========================================
+   CLOCK HEADER
+========================================== */
+
+.clock-picker-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 18px;
+
+  margin-bottom: 18px;
+}
+
+.selected-clock-time {
+  display: flex;
+  align-items: center;
+
+  gap: 2px;
+}
+
+.clock-time-part {
+  border: none;
+  background: transparent;
+
+  font-size: 28px;
+  font-weight: 700;
+
+  color: #999;
+
+  cursor: pointer;
+}
+
+.clock-time-part.active {
+  color: #6366f1;
+}
+
+.selected-clock-time > span {
+  font-size: 26px;
+  font-weight: 700;
+}
+
+
+/* ==========================================
+   AM PM
+========================================== */
+
+.clock-period {
+  display: flex;
+  flex-direction: column;
+
+  gap: 3px;
+}
+
+.clock-period button {
+  border: none;
+  background: transparent;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  color: #777;
+
+  cursor: pointer;
+}
+
+.clock-period button.period-active {
+  color: #6366f1;
+}
+
+
+/* ==========================================
+   CLOCK FACE
+========================================== */
+
+.clock-face {
+  position: relative;
+
+  width: 260px;
+  height: 260px;
+
+  margin: 0 auto;
+
+  border-radius: 50%;
+
+  background: #f5f6ff;
+}
+
+
+/* ==========================================
+   CLOCK CENTER
+========================================== */
+
+.clock-center {
+  position: absolute;
+
+  left: 50%;
+  top: 50%;
+
+  width: 10px;
+  height: 10px;
+
+  transform: translate(-50%, -50%);
+
+  border-radius: 50%;
+
+  background: #6366f1;
+}
+
+
+/* ==========================================
+   CLOCK NUMBERS
+========================================== */
+
+.clock-number {
+  position: absolute;
+
+  transform: translate(-50%, -50%);
+
+  width: 40px;
+  height: 40px;
+
+  border: none;
+  border-radius: 50%;
+
+  background: transparent;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.clock-number:hover {
+  background: #6366f1;
+  color: #ffffff;
+}
+
+.clock-number.selected {
+  background: #6366f1;
+  color: #ffffff;
+}
+
+
+/* ==========================================
+   ALL MINUTES
+========================================== */
+
+.minute-list {
+  display: grid;
+
+  grid-template-columns:
+    repeat(5, 1fr);
+
+  gap: 6px;
+
+  max-height: 220px;
+
+  overflow-y: auto;
+
+  padding: 5px;
+}
+
+.minute-list-item {
+  height: 35px;
+
+  border: none;
+  border-radius: 7px;
+
+  background: #f5f6ff;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+.minute-list-item:hover {
+  background: #6366f1;
+  color: white;
+}
+
+.minute-list-item.selected {
+  background: #6366f1;
+  color: white;
+}
+
+
+/* ==========================================
+   HELP TEXT
+========================================== */
+
+.medicine-help-text {
+  margin-top: 7px;
+
+  font-size: 13px;
+
+  color: #777;
+}

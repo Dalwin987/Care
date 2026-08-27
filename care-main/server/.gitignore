@@ -1,0 +1,13 @@
+node_modules/
+node_modules - Copy/
+
+.env
+.env.*
+server/.env
+client/.env
+
+uploads/
+dist/
+
+package - Copy.json
+package-lock - Copy.jsongit check-ignore -v server/.env

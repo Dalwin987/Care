@@ -1,0 +1,211 @@
+@import "tailwindcss";
+
+/* ==========================================
+   DOSEBOX MEDICINE POPUP
+========================================== */
+
+.medicine-popup {
+  border-radius: 28px !important;
+  padding: 30px !important;
+  overflow: hidden !important;
+}
+
+/* ==========================================
+   POPUP TITLE
+========================================== */
+
+.medicine-popup-title {
+  font-size: 26px !important;
+  font-weight: 800 !important;
+}
+
+/* ==========================================
+   MEDICINE IMAGE
+========================================== */
+
+.medicine-image-container {
+  width: 135px;
+  height: 135px;
+  margin: 0 auto 20px;
+
+  border-radius: 25px;
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #eff6ff;
+}
+
+.medicine-image {
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+  object-position: center;
+
+  display: block;
+
+  image-rendering: auto;
+}
+
+/* ==========================================
+   FALLBACK PILL
+========================================== */
+
+.medicine-icon {
+  font-size: 75px;
+  margin-bottom: 20px;
+}
+
+/* ==========================================
+   MEDICINE NAME
+========================================== */
+
+.medicine-name {
+  font-size: 26px;
+  font-weight: 800;
+
+  color: #0f172a;
+
+  margin-bottom: 18px;
+}
+
+/* ==========================================
+   INFORMATION CARDS
+========================================== */
+
+.medicine-card {
+  border-radius: 15px;
+
+  padding: 14px;
+
+  margin-bottom: 10px;
+}
+
+.dosage-card {
+  background: #eff6ff;
+}
+
+.time-card {
+  background: #f8fafc;
+}
+
+.medicine-card-title {
+  font-size: 16px;
+
+  font-weight: 700;
+
+  margin-bottom: 5px;
+}
+
+.dosage-card .medicine-card-title {
+  color: #2563eb;
+}
+
+.time-card .medicine-card-title {
+  color: #64748b;
+}
+
+.medicine-card-value {
+  font-size: 18px;
+
+  font-weight: 700;
+
+  color: #0f172a;
+}
+
+/* ==========================================
+   DESCRIPTION
+========================================== */
+
+.medicine-description {
+  margin-top: 15px;
+
+  color: #64748b;
+
+  font-size: 14px;
+
+  line-height: 1.6;
+}
+
+/* ==========================================
+   TAKEN BUTTON
+========================================== */
+
+.medicine-confirm-button {
+  border-radius: 12px !important;
+
+  padding: 12px 35px !important;
+
+  font-size: 16px !important;
+
+  font-weight: 700 !important;
+
+  transition: all 0.2s ease !important;
+}
+
+.medicine-confirm-button:hover {
+  transform: scale(1.06);
+}
+
+
+.home-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  text-decoration: none;
+  color: #2563eb;
+
+  font-size: 16px;
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+.home-logo-img {
+  width: 40px;
+  height: 40px;
+
+  object-fit: contain;
+}
+
+.home-logo:hover {
+  color: #1d4ed8;
+}
+
+
+.home-logo {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+
+  width: 45px;
+  height: 45px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #2563eb;
+
+  
+  text-decoration: none;
+
+
+  z-index: 1000;
+
+  transition:
+    transform 0.25s ease,
+
+    color 0.25s ease;
+}
+
+.home-logo:hover {
+
+  transform: translateY(-2px);
+
+ 
+}
