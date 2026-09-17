@@ -20,6 +20,10 @@ const navigation = [
     name: "Register",
     href: "/register",
   },
+   {
+    name: "Register",
+    href: "/medi",
+  },
   {
     name: "Login",
     href: "/login",
